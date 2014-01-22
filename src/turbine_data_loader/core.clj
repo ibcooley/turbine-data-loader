@@ -18,15 +18,13 @@
 (defn load-data-from-file [conf in-file]
   (let [turbine-url (make-turbine-url conf)]
     (with-open [rdr (io/reader (io/file in-file))]
-      (dorun 
-        (for [event-json (line-seq rdr)]
-          (post-event turbine-url event-json))))))
+      (doseq [event-json (line-seq rdr)]
+        (post-event turbine-url event-json)))))
 
 (defn load-data-from-stdin [conf]
   (let [turbine-url (make-turbine-url conf)]
-    (dorun 
-      (for [event-json (line-seq (java.io.BufferedReader. *in*))]
-        (post-event turbine-url event-json)))))
+    (doseq [event-json (line-seq (java.io.BufferedReader. *in*))]
+      (post-event turbine-url event-json))))
 
 (defn print-help-output []
   (println
