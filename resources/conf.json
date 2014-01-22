@@ -1,0 +1,5 @@
+{
+    "turbine-base": "http://localhost:8080",
+    "database": "mydb",
+    "collection": "mycoll"
+}
