@@ -1,7 +1,7 @@
-turbine-data-loader
+Turbine Data Loader
 ===================
 
-A turbine data loader written in clojure
+A data loader for [TurbineDB](https://github.com/sparcedge/turbinedb) written in [Clojure](http://clojure.org/).
 
 
 Getting Started
@@ -49,3 +49,9 @@ Input
 -----
 
 All input (via file or stdin) is a list of json events delimited by a newline '\n'
+
+
+License
+-------
+
+This project is Copyright (c) 2015 [SPARC](https://github.com/sparcedge/) and open sourced under the [MIT License](LICENSE.md).
